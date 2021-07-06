@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/logo"/>
+    <qresource prefix="/images">
+        <file>brush.png</file>
+        <file>ellipse.png</file>
+        <file>eraser.png</file>
+        <file>line.png</file>
+        <file>logo.png</file>
+        <file>pipette.png</file>
+        <file>rect.png</file>
+        <file>rounded_rect.png</file>
+        <file>text.png</file>
+        <file>palete.png</file>
+        <file>flow.png</file>
+    </qresource>
+</RCC>
