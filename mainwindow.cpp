@@ -2,7 +2,7 @@
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent)
 {
-    setWindowTitle("Паинт - Файл без названия");
+    setWindowTitle("Paint - Файл без названия");
     setWindowIcon(QIcon(":/images/logo.png"));
     setMinimumSize(600, 600);
 
@@ -75,7 +75,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::newFileSlot()
 {
-    setWindowTitle("Паинт - Файл без названия");
+    setWindowTitle("Paint - Файл без названия");
 
     if (my_graphics_view.getNeedToSaveFlag() == 1)
     {
@@ -91,7 +91,7 @@ void MainWindow::newFileSlot()
 
     if (dialog->exec()== QDialog::Accepted)
     {
-        setWindowTitle("Паинт - Файл без названия");
+        setWindowTitle("Paint - Файл без названия");
 
         image_width = dialog->getWidth();
         image_height=dialog->getHeight();
@@ -130,7 +130,7 @@ void MainWindow::openFileSlot()
     QString path = QFileDialog::getOpenFileName(this, "Сохранить файл", "", "*.png ;; *.jpg");
     QStringList tmp_list = path.split("/");
 
-    setWindowTitle("Паинт - " + tmp_list.last());
+    setWindowTitle("Paint - " + tmp_list.last());
 
     QImage tmp_image;
     tmp_image.load(path);
@@ -157,7 +157,7 @@ void MainWindow::saveFileSlot()
 
     QStringList tmp_list = path.split("/");
 
-    setWindowTitle("Паинт - " + tmp_list.last());
+    setWindowTitle("Paint - " + tmp_list.last());
 
     delete dialog;
 
@@ -322,7 +322,7 @@ void MainWindow::colorChangedSlot()
 
 void MainWindow::pasteSlot()
 {
-    setWindowTitle("Паинт - Файл без названия");
+    setWindowTitle("Paint - Файл без названия");
 
     QClipboard *tmp_clipboard = QApplication::clipboard();
     QImage new_image = tmp_clipboard->image();
